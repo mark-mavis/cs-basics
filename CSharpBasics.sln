@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstraction", "Abstraction\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode", "LeetCode\LeetCode.csproj", "{A2E859E0-2C7B-44D7-8548-1D145A3CD74F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "Methods\Methods.csproj", "{A2C3B005-9C56-4EF2-A36F-A95AC78B2F92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Methods", "Methods\Methods.csproj", "{A2C3B005-9C56-4EF2-A36F-A95AC78B2F92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{0A230A30-1030-4077-A5C3-2EB5166A2B18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{A2C3B005-9C56-4EF2-A36F-A95AC78B2F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2C3B005-9C56-4EF2-A36F-A95AC78B2F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2C3B005-9C56-4EF2-A36F-A95AC78B2F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A230A30-1030-4077-A5C3-2EB5166A2B18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A230A30-1030-4077-A5C3-2EB5166A2B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A230A30-1030-4077-A5C3-2EB5166A2B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A230A30-1030-4077-A5C3-2EB5166A2B18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -100,5 +100,84 @@
             // Output:
             // 0 1 1 2 3 5 8 13
         }
+
+        public static void ForEachSwitchExample_Run()
+        {
+            bool valid = false;
+            string inputValueType = "unknown";
+
+            Console.WriteLine("Enter a value");
+            string input = Console.ReadLine() ?? "empty";
+
+            Console.Write("Select the Data Type to Validate the input you have entered");
+            Console.WriteLine("Enter Value Type: ");
+            Console.WriteLine("1. Integer");
+            Console.WriteLine("2. String");
+            Console.WriteLine("3. Boolean");
+
+            string inputType = Console.ReadLine() ?? "number not entered";
+
+            switch (inputType)
+            {
+                case "1":
+                    int value;
+                    valid = int.TryParse(inputType, out value);
+                    if (valid)
+                    {
+                        inputValueType = "Integer";
+                        break;
+                    }
+                    Console.WriteLine($"{value} does not match data type: Integer");
+                    break;
+                case "2":
+                    valid = isAllAlphatetic(input);
+                    if (valid)
+                    {
+                        inputValueType = "String";
+                        break;
+                    }
+                    Console.WriteLine($"{input} does not match data type: String");
+                    break;
+                case "3":
+                    bool val;
+                    valid = bool.TryParse(input, out val);
+                    if (valid)
+                    {
+                        inputValueType = "Boolean";
+                        break;
+                    }
+                    Console.WriteLine($"{input} does not match data type: Boolean");
+                    break;
+                default:
+                    Console.WriteLine("You didn't enter a valid Data Type Choice");
+                    break;
+            }
+
+            if (valid)
+            {
+                Console.WriteLine($"User Input Value: {input} Data Type: {inputValueType}");
+            }
+        }
+        static bool isAllAlphatetic(string s)
+        {
+            foreach (char c in s)
+            {
+                if (!char.IsLetter(c))
+                {
+                    Console.WriteLine($"{s} is not a string because it contains non-letters");
+                    return false;
+                }
+            }
+            return true;
+        }
+        static bool isBoolValue(string inputType, out bool response)
+        {
+            if (!bool.TryParse(inputType, out response))
+            {
+                Console.WriteLine("Your input does not match the boolean data type you selected");
+                return false;
+            }
+            return true;
+        }
     }
 }

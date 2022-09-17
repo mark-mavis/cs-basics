@@ -10,5 +10,6 @@ public class Program
         SelectionStatement.Switch_Run();
         IterationStatment.ForLoop_Run();
         IterationStatment.ForEach_Run();
+        IterationStatment.ForEachSwitchExample_Run();
     }
 }
