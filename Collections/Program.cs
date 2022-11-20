@@ -1,10 +1,11 @@
-﻿
+﻿using Collections;
 class Program
 {
     public static void Main()
     {
 
-        Collections.Array.RunTwoDimensional();
+        //MyArray.TwoDimensionalArray();
+        MyArray.ThreeDimensionalArray();
 
     }
 }

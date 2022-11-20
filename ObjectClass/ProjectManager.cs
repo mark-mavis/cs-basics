@@ -4,8 +4,9 @@ using ObjectClass.StaticClass;
 using ObjectClass.StaticConstructor;
 using ObjectClass.Struct;
 using ObjectClass.NestedClasses;
+using Classes.Basics;
 
-class Program
+class ProjectManager
 {
     public static void Main(string[] args)
     {
@@ -26,5 +27,9 @@ class Program
 
         //NESTED CLASSES
         //TestNestedClasses.Run();
+
+        ObjectClassManager.HumanClassManager();
+        ObjectClassManager.CarClassManager();
+        ObjectClassManager.BoxClassManager();
     }
 }
