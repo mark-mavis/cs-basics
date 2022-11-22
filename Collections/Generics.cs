@@ -20,19 +20,17 @@ namespace Collections
         //We need to state what data type the generic collection is going to hold
         
         //LISTS
-        public static List<int> listElements = new List<int>();
+        public List<int> listElements = new List<int>();
         
         //KEY VALUE PAIRS
-        public static Dictionary<string, int> DictionaryKeyValuePairs = new Dictionary<string, int>();
-        public static SortedList<int, int> SortedListKeyValuePairs = new SortedList<int, int>();
+        public Dictionary<string, int> DictionaryKeyValuePairs = new Dictionary<string, int>();
+        public SortedList<int, int> SortedListKeyValuePairs = new SortedList<int, int>();
         
         //FIFO-LIFO
-        public static Queue<string> queue = new Queue<string>();
-        public static Stack<int> intStack = new Stack<int>();
+        public Queue<string> queue = new Queue<string>();
+        public Stack<int> intStack = new Stack<int>();
 
-
-
-        public static void AddIntsToList(params int[] ints)
+        public void AddIntsToList(params int[] ints)
         {
             foreach (int i in ints)
             {
@@ -40,7 +38,7 @@ namespace Collections
             }
         }
 
-        public static void PrintList()
+        public void PrintList()
         {
             foreach (int i in listElements)
             {
@@ -49,7 +47,7 @@ namespace Collections
             Console.WriteLine();
         }
 
-        public static void ClearAll()
+        public void ClearAll()
         {
             listElements.Clear();
             DictionaryKeyValuePairs.Clear();

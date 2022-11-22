@@ -23,8 +23,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IEnumerables", "IEnumerable
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Indexers", "Indexers\Indexers.csproj", "{1D0EDA6E-4122-452C-9CF0-7C683894F9A7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics", "Generics\Generics.csproj", "{1FB684BF-05E1-4577-A195-FF6013294503}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Abstraction", "Abstraction\Abstraction.csproj", "{3440760E-E9BA-4289-AB18-0CEF8D341FDD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode", "LeetCode\LeetCode.csproj", "{A2E859E0-2C7B-44D7-8548-1D145A3CD74F}"
@@ -41,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lambda", "Lambda\Lambda.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recursion", "Recursion\Recursion.csproj", "{EF140889-1DC1-4A93-A0BA-B52A5C19C685}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizationProblems", "OptimizationProblems\OptimizationProblems.csproj", "{283E496D-E562-471A-9B12-CA414F10927D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OptimizationProblems", "OptimizationProblems\OptimizationProblems.csproj", "{283E496D-E562-471A-9B12-CA414F10927D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,10 +87,6 @@ Global
 		{1D0EDA6E-4122-452C-9CF0-7C683894F9A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D0EDA6E-4122-452C-9CF0-7C683894F9A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D0EDA6E-4122-452C-9CF0-7C683894F9A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FB684BF-05E1-4577-A195-FF6013294503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FB684BF-05E1-4577-A195-FF6013294503}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FB684BF-05E1-4577-A195-FF6013294503}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FB684BF-05E1-4577-A195-FF6013294503}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3440760E-E9BA-4289-AB18-0CEF8D341FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3440760E-E9BA-4289-AB18-0CEF8D341FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3440760E-E9BA-4289-AB18-0CEF8D341FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
