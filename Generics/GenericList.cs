@@ -23,6 +23,7 @@
                 set { data = value; }
             }
         }
+
         private Node? head;
 
         public GenericList()

@@ -66,5 +66,92 @@ namespace Collections
                 }
             }
         }
+        public static void FiveFriendsExercise()
+        {
+            string[] friends = new string[] {"Robby", "Chase", "Steele", "Adam", "John"};
+            
+            foreach(string friend in friends)
+            {
+                Console.WriteLine(friend);
+            }
+        }
+        public static void ForeachLoopsSwitchChallenge()
+        {
+            Console.WriteLine("Enter a value => ");
+            string input = Console.ReadLine();
+            string cleanedinput = input.Replace(" ", "");
+
+
+            Console.WriteLine("Select the Data Type to validate the input you have entered => ");
+            Console.WriteLine("Press 1 for String");
+            Console.WriteLine("Press 2 for Integer");
+            Console.WriteLine("Press 3 for Boolean");
+            
+            string choice = Console.ReadLine();
+            
+            int choice_int;
+            int.TryParse(choice, out choice_int);
+
+            Console.WriteLine($"You have entered a value: {input}");
+
+            
+            switch (choice_int)
+            {
+                case 1:
+                    if(isAllAlphabetic(cleanedinput)) Console.WriteLine("It is a valid: String");
+                    else Console.WriteLine("It is an invalid: String");
+                    break;
+                case 2:
+                    
+                    int temp_int;
+                    if(int.TryParse(cleanedinput, out temp_int))
+                    {
+                        Console.WriteLine("It is a valid: Integer");
+                    }
+                    else
+                    {
+                        Console.WriteLine("It is an invalid: Integer");
+                    }
+                    break;
+                case 3:
+                    bool temp_bool;
+                    if(bool.TryParse(cleanedinput, out temp_bool))
+                    {
+                        Console.WriteLine("It is a valid: Boolean");
+                    }
+                    else
+                    {
+                        Console.WriteLine("It is an invalid: Boolean");
+                    }
+                    break;
+            }
+
+        }
+        static bool isAllAlphabetic(string value)
+        {
+            foreach(char c in value)
+            {
+                if(!Char.IsLetter(c)) return false;
+            }
+            return true;
+        }
+        public static void RunTickTackToe()
+        {
+
+            int[,] tickTackToeBoard = { 
+                { 0, 0, 0}, 
+                { 0, 0, 0}, 
+                { 0, 0, 0} 
+            };
+        }
+
+        //Start Tic Tac Toe Game
+        // While true  - Running Game
+        //  if(any tic tac toes) - return true
+        //  else(proceed with game)
+        //  
+        //
+            
     }
+
 }
