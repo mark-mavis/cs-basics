@@ -37,8 +37,9 @@ class Program
         //MyArrayList.AddAllElementsToArrayList(25, "Hello", "13.37", "13", 128, 25.5, 13);
         //MyArrayList.PrintObjects();
 
-        MyGenericListTester
-        
+        MyDictionaryTester.ParenthesesGame("(()())");
+        MyDictionaryTester.ParenthesesGame("{]");
+        MyDictionaryTester.RunEmployeeDirectory();
 
         
     }
