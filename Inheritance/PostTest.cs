@@ -5,6 +5,7 @@
         public static void Run()
         {
             Post post = new Post("Happy Birthday Casey!", "markwmavis", true);
+            
             Console.WriteLine(post.GetType().ToString() + ": " + post.ToString());
 
             post.Update("Happy Birthday Casey! I hope it is a good one.", true);
