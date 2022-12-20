@@ -1,6 +1,7 @@
 ﻿using SocialMediaApp;
 using Inheritance.ElectricalDevice;
-using Inheritance.CarTest;
+using Inheritance.Car;
+
 
 
 namespace Inheritance
@@ -20,8 +21,10 @@ namespace Inheritance
     {
         private static void Main(string[] args)
         {
+            CarTest.Run();
             ElectricalDeviceTest.Run();
             PostTest.Run();
+            
         }
     }
 

@@ -1,4 +1,4 @@
-﻿namespace Inheritance.CarTest
+﻿namespace Inheritance.Car
 {
     class CarTest
     {
