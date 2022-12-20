@@ -97,8 +97,8 @@ namespace Delegates
             GenericDelegate<int> sum = Sum;
             Console.WriteLine(sum(10, 20));
 
-            GenericDelegate<string> con = Concat;
-            Console.WriteLine(con("String 1 and ", "String 2 Concatenated"));
+            GenericDelegate<string> concat = Concat;
+            Console.WriteLine(concat("String 1 and ", "String 2 Concatenated"));
         }
         
     }

@@ -10,6 +10,10 @@
             AnonymousMethodwithFuncDelegate.RunProgram();
             ActionDelegate.RunProgram();
 
+
+            Console.WriteLine("Press enter to shut down...");
+            Console.ReadLine();
+
             return 1;
         }
     }
