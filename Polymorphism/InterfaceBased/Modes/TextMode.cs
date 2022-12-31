@@ -1,6 +1,6 @@
 ﻿namespace Polymorphism.InterfaceBased
 {
-    public class TextMode : ICommunication
+    public class TextMode : ICommunicationType
     {
         public void Communicate()
         {

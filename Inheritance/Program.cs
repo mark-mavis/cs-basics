@@ -19,9 +19,9 @@ namespace Inheritance
     {
         private static void Main(string[] args)
         {
-            //CarTest.Run();
-            //ElectricalDeviceTest.Run();
-            //PostTest.Run();
+            CarTest.Run();
+            ElectricalDeviceTest.Run();
+            PostTest.Run();
             EmployeeTest.Run();
 
         }

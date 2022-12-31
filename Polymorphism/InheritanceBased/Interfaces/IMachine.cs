@@ -1,6 +1,6 @@
 ﻿namespace Polymorphism.InheritanceBased
 {
-    public class IMachine
+    public class IMachine 
     {
         public void StartMachine(Machine machine)
         {
@@ -10,5 +10,6 @@
         {
             machine.Stop();
         }
+
     }
 }

@@ -64,6 +64,7 @@ namespace IEnumerables
                 Current = 0;
             }
         }
+
         public static void RunExercise01()
         {
             var array = new int[] {1, 2, 3 };

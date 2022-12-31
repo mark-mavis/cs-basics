@@ -8,12 +8,23 @@ namespace Polymorphism.InheritanceBased
 
     class Car : Machine
     {
+        public Car()
+        {
+            this.Name = "unknown";
+            this.Price = 0;
+        }
+
+        public Car(string name, double price)
+        {
+            this.Name = name;
+            this.Price = price;
+        }
+
         public override void Start()
         {
-            Console.WriteLine("Car started up");
-            
+            Console.WriteLine("Car started up");    
         }
-        public override void Stop()
+        public sealed override void Stop() //sealed keyword make it so now inheriting classes can override the Stop method
         {
             Console.WriteLine("Car turned off");
 

@@ -6,6 +6,13 @@ class Program
         //IEnumerable.IterateArrayList();
         //IEnumerable.IterateGenericCollection();
         //IEnumerableClass.IEnumerableYield();
-        IEnumerableClass.CustomIEnumerable();
+        //IEnumerableClass.CustomIEnumerable();
+        
+        //DogShelterExamples.Run();
+
+        //IEnumerableEx1.Run();
+        //IEnumerableEx2.Run();
+
+        PhonebookTest.Run();
     }
 }

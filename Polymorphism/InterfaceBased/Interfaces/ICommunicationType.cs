@@ -1,6 +1,7 @@
 ﻿namespace Polymorphism.InterfaceBased
 { 
-    interface ICommunication{
+    interface ICommunicationType
+    {
         void Communicate();
     }
 }

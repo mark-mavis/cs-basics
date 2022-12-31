@@ -2,7 +2,7 @@
 namespace Polymorphism.InterfaceBased
 {
     //Public Class
-    public class VoiceMode : ICommunication 
+    public class VoiceMode : ICommunicationType 
     {
         //Public Method
         public void Communicate()

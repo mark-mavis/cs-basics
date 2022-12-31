@@ -3,7 +3,7 @@
     class CommunicationFacade
     {
         //Method
-        public void StartCommunication(ICommunication communication)
+        public void StartCommunication(ICommunicationType communication)
         {
             communication.Communicate();
         }

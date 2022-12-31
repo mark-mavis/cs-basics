@@ -36,6 +36,7 @@ namespace Delegates
     */
 
     public delegate void MyDelegate(string message);
+    
     class Delegate
     {
         class ClassA
@@ -81,6 +82,7 @@ namespace Delegates
 
     //Generic Delegate that works with many functions of the same signature
     public delegate T GenericDelegate<T>(T param1, T param2);
+   
     class GenericDelegate
     {
         public static int Sum(int param1, int param2)

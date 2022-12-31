@@ -1,7 +1,5 @@
 ﻿namespace Polymorphism.MemberOverriding
 {
-    
-    
     public class SuperClass
     {
         public virtual void Method1()
@@ -11,6 +9,15 @@
         public virtual void Method2()
         {
             Console.WriteLine("Super Class Method2 Called");
+        }
+        public virtual void Method3()
+        {
+            Console.WriteLine("Super Class Method3 Called");
+        }
+
+        public virtual void Method4()
+        {
+            Console.WriteLine("Super Class Method4 Called");
         }
     }
 
@@ -26,12 +33,17 @@
         //you can use the New keyword hide the superclasses
         //"Method2"
         public new void Method2()
-        {
-            
+        {    
             Console.WriteLine("Derived Class Method2 Called");
-
+        }
+        public sealed override void Method3()
+        {
+            base.Method3();
+            Console.WriteLine("Derived Class Sealed Method 3 Called");
         }
         
+
+
     }
 
     public class MemberOverriding
