@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Security;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Delegates
+﻿namespace Delegate.Ex01
 {
     /*  What if we want to pass a function as a parameter?
     *  
@@ -35,73 +28,24 @@ namespace Delegates
     *   Parameter List: The parameters which are required by the method when called through the delegate.
     */
 
-    public delegate void MyDelegate(string message);
-    
-    class Delegate
+
+    //Delegate that matches the method signatures in both Class A and Class B
+    public delegate void MyDelegate(string message);    
+    internal class Delegate
     {
-        class ClassA
+        public class ClassA
         {
             public static void MethodA(string message)
             {
                 Console.WriteLine("Called ClassA.MethodA() with parameter: " + message);
             }
         }
-        class ClassB
+        public class ClassB
         {
             public static void MethodA(string message)
             {
                 Console.WriteLine("Called ClassB.MethodA() with parameter: " + message);
             }
         }
-        public static void RunDelegateExercise()
-        {
-            //Setting Target Method
-            MyDelegate del = ClassA.MethodA;
-            del("Hello World");
-
-            //Multicast Delegate
-            MyDelegate del1 = ClassA.MethodA;
-            MyDelegate del2 = ClassB.MethodA;
-            MyDelegate combined_del = del1 + del2;
-            combined_del("Combined Delegate");
-
-            MyDelegate del3 = (string message) => Console.WriteLine("Called lambra expression: " + message);
-            combined_del += del3;
-
-            combined_del("Hello World");
-            
-            //Passing functions as a Parameter
-            InvokeDelegate(del1);
-        }
-        static void InvokeDelegate(MyDelegate del)
-        {
-            del("Hello World");
-        }
-    }
-
-
-    //Generic Delegate that works with many functions of the same signature
-    public delegate T GenericDelegate<T>(T param1, T param2);
-   
-    class GenericDelegate
-    {
-        public static int Sum(int param1, int param2)
-        {
-            return param1 + param2;
-        }
-        public static string Concat(string str1, string str2)
-        {
-            return str1 + str2;
-        }
-
-        public static void RunGenericClassDelegate()
-        {
-            GenericDelegate<int> sum = Sum;
-            Console.WriteLine(sum(10, 20));
-
-            GenericDelegate<string> concat = Concat;
-            Console.WriteLine(concat("String 1 and ", "String 2 Concatenated"));
-        }
-        
     }
 }

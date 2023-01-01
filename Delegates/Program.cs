@@ -1,11 +1,13 @@
-﻿namespace Delegates
+﻿using Delegate.Delegates;
+
+namespace Delegates
 {
     class Program
     {
         public static int Main()
         {
-            //Delegate.RunDelegateExercise();
-            GenericDelegate.RunGenericClassDelegate();
+            DelegateController.RunExercise01();
+            GenericDelegateController.RunExercise();
             FunctionDelegate.RunProgram();
             AnonymousMethodwithFuncDelegate.RunProgram();
             ActionDelegate.RunProgram();
