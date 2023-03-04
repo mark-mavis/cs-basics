@@ -1,8 +1,8 @@
-﻿namespace Delegate.Ex02
+﻿namespace Delegate.Delegate.Ex02
 {
-    internal class Delegate
+    internal delegate void Delegate(string text);
+    internal class ClassObj
     {
-        public delegate void MyDelegate(string text);
         public class StringFormat
         {
             public void ToUpperCase(string text) => Console.WriteLine(text.ToUpper());
