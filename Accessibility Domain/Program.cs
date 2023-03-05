@@ -22,7 +22,6 @@ public class T1
         public static int publicInt;            //ACCESSABLE by T1
         internal static int internalInt;        //ACCESSABLE by T1
         private static int privateInt = 0;      //NOT accessable outside M1
-
     }
 
     private class M2    //ACCESSABLE to T1
@@ -34,20 +33,21 @@ public class T1
 }
 
 
-
 class Program {
     public static void Main()
     {
         // Calling T1's public and internal variables;
-        Console.WriteLine(T1.publicInt = 50);
+        T1.publicInt = 50;
+        Console.WriteLine($"T1.publicInt = {T1.publicInt}");
         // Calling T1's public and internal variables;
-        Console.WriteLine(T1.internalInt = 51);
-
+        T1.internalInt = 51;
+        Console.WriteLine($"T1.internalInt = {T1.internalInt}");
+        T1.M1.publicInt = 100;
         // T1 can call M1's publicInt variable
-        Console.WriteLine(T1.M1.publicInt = 100);
+        Console.WriteLine($"T2.M1.publicInt = {T1.M1.publicInt}");
         // T1 can call M1's internalInt variable
-        Console.WriteLine(T1.M1.internalInt = 101);
-
+        T1.M1.internalInt = 101;
+        Console.WriteLine($"T2.M1.internalInt = {T1.M1.internalInt = 101}");
     }
 }
 

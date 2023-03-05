@@ -3,12 +3,13 @@
     class JaggedArray
     {
         //Null-Conditional operators ?.
-        public static int[][]? _jaggedArray;
+        
 
-        public JaggedArray(int[][] arr)
+        public JaggedArray(int dim)
         {
-            _jaggedArray = arr;
-        }
+            int[][] _jaggedArray = new int[dim][];
+    }
+            
 
         public static void PrintOutJaggedArray(int[][] arr)
         {

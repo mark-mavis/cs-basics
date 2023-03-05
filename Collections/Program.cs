@@ -19,15 +19,15 @@ class Program
         //ParamKeyword.RunParamMin(634364,13235,51235);
 
         //Add Any Type to Non-Generic
-        NonGenerics nongenerics = new NonGenerics();
-        nongenerics.AddObjectsToArrayList(5, 3.14f, "Denis", '$');
-        nongenerics.Sum();
+        //NonGenerics nongenerics = new NonGenerics();
+        //nongenerics.AddObjectsToArrayList(5, 3.14f, "Denis", '$');
+        //nongenerics.Sum();
         
-        nongenerics.AddElementsToHashTable();
-        nongenerics.FindElementsInHashtable(325235);
-        nongenerics.FindElementsInHashtable(167435);
+        //nongenerics.AddElementsToHashTable();
+        //nongenerics.FindElementsInHashtable(325235);
+        //nongenerics.FindElementsInHashtable(167435);
 
-        nongenerics.PrintAllHashtableKeys();
+        //nongenerics.PrintAllHashtableKeys();
 
         //Generics generics = new Generics();
         ////Add Only One Type to Generic
@@ -37,10 +37,8 @@ class Program
         //MyArrayList.AddAllElementsToArrayList(25, "Hello", "13.37", "13", 128, 25.5, 13);
         //MyArrayList.PrintObjects();
 
-        MyDictionaryTester.ParenthesesGame("(()())");
-        MyDictionaryTester.ParenthesesGame("{]");
-        MyDictionaryTester.RunEmployeeDirectory();
+        //Authenticator.Parentheses("{{()}}");
 
-        
+        _ = new CollectionsExerciseController();
     }
 }

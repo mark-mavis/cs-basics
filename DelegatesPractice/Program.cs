@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
-    public delegate 
+    
     public static void Main()
     {
         Object obj1 = new Object(21, "Red");
