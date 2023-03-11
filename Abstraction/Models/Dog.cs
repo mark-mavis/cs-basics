@@ -4,7 +4,10 @@
     {
         public override string Name
         {
-            get { return _name; }
+            get { 
+                    if(_name != null) return _name;
+                    else return "No name";
+                }
             set { _name = value; }
         }
         protected override void Walk()

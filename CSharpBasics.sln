@@ -49,11 +49,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesPractice", "Delega
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankApp", "BankApp\BankApp.csproj", "{9CB2D0DD-731D-411F-B2E3-ACC550C09950}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accessibility Domain", "Accessibility Domain\Accessibility Domain.csproj", "{F4863B22-95CB-4000-A764-BD9F07DA64EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Accessibility Domain", "Accessibility Domain\Accessibility Domain.csproj", "{F4863B22-95CB-4000-A764-BD9F07DA64EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{887B6A48-F903-4E06-8339-0363B4BC60EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strings", "Strings\Strings.csproj", "{887B6A48-F903-4E06-8339-0363B4BC60EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integers", "Integers\Integers.csproj", "{EA3D8F7B-756D-48BE-B84D-5309C637DE08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integers", "Integers\Integers.csproj", "{EA3D8F7B-756D-48BE-B84D-5309C637DE08}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassArchitecture", "ClassArchitecture\ClassArchitecture.csproj", "{8B4F4F2A-CE12-4CD9-8DBA-5C6AA9838077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enum", "Enum\Enum.csproj", "{E26A16B2-F914-4508-9ED2-14ADABBE62E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -165,6 +169,14 @@ Global
 		{EA3D8F7B-756D-48BE-B84D-5309C637DE08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA3D8F7B-756D-48BE-B84D-5309C637DE08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA3D8F7B-756D-48BE-B84D-5309C637DE08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B4F4F2A-CE12-4CD9-8DBA-5C6AA9838077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B4F4F2A-CE12-4CD9-8DBA-5C6AA9838077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B4F4F2A-CE12-4CD9-8DBA-5C6AA9838077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B4F4F2A-CE12-4CD9-8DBA-5C6AA9838077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E26A16B2-F914-4508-9ED2-14ADABBE62E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E26A16B2-F914-4508-9ED2-14ADABBE62E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E26A16B2-F914-4508-9ED2-14ADABBE62E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E26A16B2-F914-4508-9ED2-14ADABBE62E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
