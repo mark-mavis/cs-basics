@@ -1,125 +1,48 @@
-﻿
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.InteropServices;
 
-namespace AnimalWorldApp;
-
-
-
-interface IMovable 
-{ 
-    void Move(int x, int y, int rate);
-}
-class Swim : IMovable
+namespace enum_example
 {
-    public void Move(int x, int y, int rate)
+    public enum ProductCode { Milk, Tea, Meat, Break};
+
+    class Program
     {
-        Console.WriteLine($"Swimming to position {x},{y} at a rate of {rate}");
-    }
-}
-class Fly : IMovable
-{
-    private enum MovementType { Takeoff, Glide, Land };
-    public void Move(int x, int y, int rate)
-    {
-        Console.WriteLine($"Moving to position {x}, {y}, at a rate of {rate}");
-    }
-}
+        private enum ElectronicProductCode
+        {
+            Keyboard = 0, Monitor = 1, Mouse = 2,
+        }
 
-interface IAnimalBehavior
-{
+        public static void Run()
+        {
+            string milk_name = ProductCode.Milk.ToString();     //retrieving string MilK
+            Console.WriteLine(milk_name);   
+
+            ProductCode parse_product;
+            bool status = Enum.TryParse(milk_name, out parse_product);
+            Console.WriteLine(status);
+
+            int electronic_product_code = (int)ElectronicProductCode.Keyboard;
+            Console.WriteLine(electronic_product_code);
  
-}
-interface IPreditor : IAnimalBehavior
-{
-    void Hunt();
-}
-class Preditor : IPreditor
-{
-    public void Hunt()
-    {
-        Console.WriteLine("Preditor Attacking");
+            Console.WriteLine(((ElectronicProductCode)electronic_product_code).ToString());
+
+            ProductCode product_data_type;
+            bool product_data_parse_status = Enum.TryParse(ElectronicProductCode.Monitor.ToString(), out product_data_type);
+            
+            
+            Console.WriteLine(product_data_type);
+            Console.WriteLine((int)product_data_type);
+            Console.WriteLine(product_data_type.ToString());
+            
+        }
     }
 }
-interface IPrey : IAnimalBehavior
-{
-    void Evade();
-
-}
-class Prey : IPrey
-{
-    public void Evade()
-    {
-        Console.WriteLine($"Prey is Evading");
-    }
-}
-
-
-
-class Animal : IMovable, IAnimalBehavior
-{
-    private string _animalName;
-    private IMovable _movementType;
-    private IAnimalBehavior _animalType;
-
-    public Animal(IMovable movementType, IAnimalBehavior behavior)
-    {
-        _movementType= movementType;
-        _animalType = behavior;
-
-    }
-    public void Move(int x, int y, int rate)
-    {
-        Console.WriteLine($"Flying to ({x},{y}) at a rate of {rate} ft/sec");
-    }
-    public void Hunt()
-    {
-        Console.WriteLine("B");
-    }
-}
-
-
-class Fish : IMovable, IAnimalBehavior
-{
-    private IMovable _movementType;
-    private IAnimalBehavior _animalbehavior;
-    public Fish(IMovable movementType, IAnimalBehavior behavior)
-    {
-        _movementType = movementType;
-        _animalbehavior = behavior;
-    }
-    public void Move(int x, int y, int rate)
-    {
-        Console.WriteLine($"Swimming to {x},{y} at a rate of {rate}");
-    }
-    public void Evade()
-    {
-        Console.WriteLine("Fish swimming deeper");
-    }
-}
-
-
-
 
 
 class Program
 {
-
-
     public static void Main()
     {
-        IAnimalBehavior preditor = new Preditor();
-        IAnimalBehavior prey = new Prey();
-        
-        IMovable fly = new Fly();
-        IMovable swim = new Swim();
-
-        Bird eagle = new Bird(fly, preditor);
-        eagle.Move(4, 6, 4);
-        Bird pigeon = new Bird(fly, prey);
-        pigeon.Move(10, 5, 2);
-        Fish salmon = new Fish(swim, prey);
-        salmon.Move(1, 5, 3);
-
+        enum_example.Program.Run();
 
     }
 }
