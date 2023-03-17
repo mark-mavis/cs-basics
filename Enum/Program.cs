@@ -33,6 +33,7 @@ namespace enum_example
             Console.WriteLine((int)product_data_type);
             Console.WriteLine(product_data_type.ToString());
             
+            Console.ReadLine();
         }
     }
 }
