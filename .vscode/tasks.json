@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Polymorphism/Polymorphism.csproj",
+                "${workspaceFolder}/Delegates/Delegate.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Polymorphism/Polymorphism.csproj",
+                "${workspaceFolder}/Delegates/Delegate.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Polymorphism/Polymorphism.csproj"
+                "${workspaceFolder}/Delegates/Delegate.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

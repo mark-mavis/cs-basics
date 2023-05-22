@@ -1,5 +1,5 @@
 ﻿namespace Delegate.Generic.MultiTypeDelegate
-{ 
+{
     //---------MULTIPLE TYPE DELEGATE
     //public delegate TResult TwoInputDelegate<in T1, in T2, out TResult>(int param1, int param2, bool answer);
     public delegate T2 MyCustomDelegate<in T1, out T2>(T1 param1, T1 param2);
@@ -20,6 +20,21 @@
         public static decimal AddMultiType(int param1, double param2, float param3)
         {
             return (decimal)param1 + (decimal)param2 + (decimal)param3;
+        }
+    }
+    
+    internal class MultiTypeDelegateController
+    {
+        public static void RunExercise01()
+        {
+            MyCustomDelegate<int, bool> compInt = ClassObj.CompareInt;
+            Console.WriteLine(compInt(23, 20));
+
+            MyCustomDelegate<string, bool> compStr = ClassObj.CompareString;
+            Console.WriteLine(compStr("Hello", "Hell0"));
+
+            MyCustomDelegate2<int, double, float, decimal> addmultitype = ClassObj.AddMultiType;
+            Console.WriteLine(addmultitype(4, 6.434d, 5.4f));
         }
     }
 }

@@ -26,24 +26,49 @@
     *   Parameter List: The parameters which are required by the method when called through the delegate.
     */
 
-namespace Delegate.Delegate
+namespace Delegate
 {
-    internal class DelegateController
+    //Delegate that matches the method signatures in both Class A and Class B
+    public delegate void MyDelegate(string message);
+    public delegate void CaseDelegate(string text);
+
+    public class ClassA
+    {
+        public static void MethodA(string message)
+        {
+            Console.WriteLine("Called ClassA.MethodA() with parameter: " + message);
+        }
+    }
+
+    public class ClassB
+    {
+        public static void MethodA(string message)
+        {
+            Console.WriteLine("Called ClassB.MethodA() with parameter: " + message);
+        }
+    }
+
+    public class StringFormat
+    {
+        public void ToUpperCase(string text) => Console.WriteLine(text.ToUpper());
+        public void ToLowerCase(string text) => Console.WriteLine(text.ToLower());
+    }
+    
+    public class DelegateController
     {
         public static void RunExercise01()
         {
-            
             //Setting Target Method
-            Ex01.MyDelegate del = Ex01.Delegate.ClassA.MethodA;
+            MyDelegate del = ClassA.MethodA;
             del("Hello World");
 
             //Multicast Delegate
-            Ex01.MyDelegate del1 = Delegate.Ex01.Delegate.ClassA.MethodA;
-            Ex01.MyDelegate del2 = Delegate.Ex01.Delegate.ClassB.MethodA;
-            Ex01.MyDelegate combined_del = del1 + del2;
+            MyDelegate del1 = ClassA.MethodA;
+            MyDelegate del2 = ClassB.MethodA;
+            MyDelegate combined_del = del1 + del2;
             combined_del("Combined Delegate");
 
-            Ex01.MyDelegate del3 = (string message) => Console.WriteLine("Called lambra expression: " + message);
+            MyDelegate del3 = (string message) => Console.WriteLine("Called lambra expression: " + message);
             combined_del += del3;
 
             combined_del("Hello World");
@@ -52,7 +77,7 @@ namespace Delegate.Delegate
             InvokeDelegate(del1);
         }
 
-        private static void InvokeDelegate(Ex01.MyDelegate del)
+        private static void InvokeDelegate(MyDelegate del)
         {
             del("Hello World");
         }
@@ -60,7 +85,10 @@ namespace Delegate.Delegate
 
         public static void RunExercise02()
         {
-
+            StringFormat str_format = new StringFormat();
+            CaseDelegate cd = new CaseDelegate(str_format.ToLowerCase);
+            cd += str_format.ToUpperCase;
+            cd("Title Of A Movie");
         }
     }
 }
