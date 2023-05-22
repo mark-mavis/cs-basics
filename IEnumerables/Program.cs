@@ -13,6 +13,8 @@ class Program
         //IEnumerableEx1.Run();
         //IEnumerableEx2.Run();
 
-        PhonebookTest.Run();
+        //PhonebookTest.Run();
+
+        basic_enumerable.Program.Run();
     }
 }

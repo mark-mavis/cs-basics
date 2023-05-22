@@ -53,19 +53,46 @@ class Client
     }
 }
 
-class Account : Bank
-{
-    public string AccountNum { get; set; }
-    public 
 
-}
 
-class CheckingAccount : Account
+namespace Account
 {
 
+    public enum AccountType { Checking, Savings };
+
+    
+    interface IDepositType
+    {
+        AccountType Type { get; set; }
+    }
+    interface IDeposit
+    {
+        void Deposit();
+    }
+    
+    class Account
+    {
+        protected string? _accountNumber;
+        protected AccountType? _accountType;
+        public string AccountNumber { 
+            get{ 
+                if(_accountNumber != null) return _accountNumber;
+                else return "unknown";
+            }
+            set{ _accountNumber = value; } 
+        }
+        public AccountType AccountType { 
+            get { return _accountType.Value; } 
+            set { _accountType = value; }
+        }
+
+        public Account(string accNum, AccountType accType)
+        {
+            AccountNumber = accNum;
+            AccountType = accType;
+        }
+    }
 }
 
-class SavingsAccount : Account
-{
 
-}
+

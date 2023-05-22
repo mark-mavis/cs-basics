@@ -8,9 +8,9 @@
         public JaggedArray(int dim)
         {
             int[][] _jaggedArray = new int[dim][];
-    }
+        }
             
-
+        /*
         public static void PrintOutJaggedArray(int[][] arr)
         {
             for(int i = 0; i < _jaggedArray.GetLength(0); i++)
@@ -20,7 +20,8 @@
                     Console.WriteLine(_jaggedArray[i][j]);
                 }
             }
-        }  
+        }
+        */
     }
 
     class JaggedManager

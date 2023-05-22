@@ -1,4 +1,7 @@
 ﻿using Collections;
+using DictionaryExample;
+using StudentHashtableExample;
+
 class Program
 {
     public static void Main()
@@ -39,6 +42,9 @@ class Program
 
         //Authenticator.Parentheses("{{()}}");
 
-        _ = new CollectionsExerciseController();
+        //_ = new CollectionsExerciseController();
+
+        //StudentHashtable.Run();
+        EmployeeDatabaseController.Run();
     }
 }

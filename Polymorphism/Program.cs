@@ -15,8 +15,17 @@ using Polymorphism.MemberOverriding;
 public class Program
 {
     static void Main(string[] args)
-    {
-        //Inheritance Based - - - - - - - - - - - - 
+    {       
+        CommunicationFacade CommunicationFacade = new CommunicationFacade();
+
+        var mode = IO.GetUserInput();
+
+        ICommunicationType factory = CommunicationFactory.Create(mode);
+
+        Console.WriteLine("Communication starting....");
+        
+        CommunicationFacade.StartCommunication(factory);
+
 
         Machine car = new Car();
         Machine ship = new Ship();
@@ -29,21 +38,6 @@ public class Program
         imachine.ShutdownMachine(ship);
         imachine.StartMachine(machine);
         imachine.ShutdownMachine(machine);
-
-
-        //Interface Based - - - - - - - - - - - - - - - - 
-        
-        CommunicationFacade CommunicationFacade = new CommunicationFacade();
-        
-        int mode = IO.GetUserInput(); // Collect, Parse, Return User input
-        
-        ICommunicationType factory = CommunicationFactory.Create(mode);     
-
-        Console.WriteLine("Communication starting....");
-        CommunicationFacade.StartCommunication(factory);
-
-
-
 
         MemberOverloading.ChangeArgs();
         MemberOverloading.ChangeDateType();

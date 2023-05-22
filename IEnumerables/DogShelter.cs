@@ -53,15 +53,15 @@ namespace IEnumerables
         public static void Run()
         {
             DogShelter dogShelter = new DogShelter();
-            foreach (Dog d in dogShelter)
+            foreach (Dog dog in dogShelter)
             {
-                if (d.IsGood)
+                if (dog.IsGood)
                 {
-                    d.GiveTreat(2);
+                    dog.GiveTreat(2);
                 }
                 else
                 {
-                    d.GiveTreat(1);
+                    dog.GiveTreat(1);
                 }
             }
         }

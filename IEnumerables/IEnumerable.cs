@@ -1,37 +1,63 @@
 ﻿using System.Collections;
 using System.ComponentModel;
 
+
+namespace basic_enumerable
+{
+    class MyArrayList<T> : IEnumerable
+    {
+        T[] m_Items;
+        int freeIndex = 0;
+
+        public MyArrayList(int size)
+        {
+            m_Items = new T[size];
+        }
+
+        public void Add(T item)
+        {
+            m_Items[freeIndex] = item;
+            freeIndex++;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            foreach (T o in m_Items)
+            {
+                if (o == null)
+                {
+                    break;
+                }
+                yield return o;
+            }
+        }
+    }
+    class Program
+    {
+        public static void Run()
+        {
+            MyArrayList<int> myArrayOfInt = new(3);
+            myArrayOfInt.Add(15);
+            myArrayOfInt.Add(25);
+            myArrayOfInt.Add(-1);
+            foreach(int i in myArrayOfInt)
+            {
+                Console.WriteLine(i);
+            }
+            
+        }
+    }
+}
+
+
+
+
+
 namespace IEnumerables
 {
     public class IEnumerableClass
     {
-        class MyArrayList : IEnumerable
-        {
-            object[] m_Items = null;
-            int freeIndex = 0;
-
-            public MyArrayList()
-            {
-                m_Items = new object[100];
-            }
-
-            public void Add(object item)
-            {
-                m_Items[freeIndex] = item;
-                freeIndex++;
-            }
-            public IEnumerator GetEnumerator()
-            {
-                foreach (object o in m_Items)
-                {
-                    if(o == null)
-                    {
-                        break;
-                    }
-                    yield return 0;
-                }
-            }
-        }
+        
         class MyInfiniteEnumable : IEnumerable
         {
             public IEnumerator GetEnumerator()

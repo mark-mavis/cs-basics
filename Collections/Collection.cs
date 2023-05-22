@@ -16,8 +16,14 @@ class CollectionsExerciseController
     static CollectionsExerciseController()
     {
         MyArray<int>.SingleDimensionalArray(new int[] {1, 2, 3, 4, 5 });
-        MyArray<string>.TwoDimensionalArray(new string[,]{ {"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"} });
-        MyArray<int>.ThreeDimensionalArray(new int[,,] { {{1, 2, 3},{4, 5, 6}}, { { 1, 2, 3 }, { 4, 5, 6 } }, { {7, 8, 9},{10, 11, 12}} });
+        MyArray<string>.TwoDimensionalArray(new string[,]{ 
+            {"1", "2", "3"}, 
+            {"4", "5", "6"}, 
+            {"7", "8", "9"}});
+        MyArray<int>.ThreeDimensionalArray(new int[,,] { 
+            {   {1, 2, 3},  {4, 5, 6}   }, 
+            {   {1, 2, 3},  {4, 5, 6}   }, 
+            {   {7, 8, 9},  {10,11,12}  }});
         MyArray<string>.ThreeDimensionalArray(new string[,,]{
             {
                 {"000", "010", "020" },
