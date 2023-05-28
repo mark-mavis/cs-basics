@@ -8,7 +8,13 @@
     class Addition<T> : IDelegateCalculate
     {
         private T _value;
-        public T Value { get{return _value; } set{_value = value; } }
+        public T Value { 
+            get{ return _value; } 
+            set{ _value = value; } 
+        }
+        public Addition(T val){
+            _value = val;
+        }
     }
     
     

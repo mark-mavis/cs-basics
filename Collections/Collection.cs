@@ -49,7 +49,10 @@ class CollectionsExerciseController
         {
             foreach (object obj in parameters)
             {
-                objList.Add(obj);
+                if(objList != null){
+                    objList.Add(obj);
+                }
+                
             }
         }
         public void RemoveElementMatchingValue(object o)
