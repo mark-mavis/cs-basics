@@ -4,6 +4,7 @@ public enum AccountType{ Checking = 0, Savings = 1 }
 namespace BankingApp{
 
     public class Account{
+        protected Client? AccountHolder = null;
         protected AccountType AccountType {get; set;}
         protected decimal Balance{get; set;}
         public void Deposit(decimal amount)
@@ -26,6 +27,8 @@ namespace BankingApp{
                 throw new NotImplementedException();
             }   
         }
+
+    
     }
     public class CheckingAccount : Account {
 

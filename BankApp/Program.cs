@@ -6,6 +6,11 @@ class Program
     {
 
         Bank bank = new Bank("Bank of America");
+        bank.CreateNewClient();
+        bank.InitializeDirectory();
+        bank.CreateNewClient();
+        
+
         
 
 

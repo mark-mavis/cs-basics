@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/UnitTestingClass/UnitTestingClass.csproj",
+                "${workspaceFolder}/BankApp/BankApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/UnitTestingClass/UnitTestingClass.csproj",
+                "${workspaceFolder}/BankApp/BankApp.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/UnitTestingClass/UnitTestingClass.csproj"
+                "${workspaceFolder}/BankApp/BankApp.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
