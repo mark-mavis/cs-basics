@@ -1,6 +1,8 @@
 ﻿
-namespace Interfaces
+namespace DestroyableObjects
 {
+    
+
     internal class Car : Vehicle, IDestroyable
     {
         public string DestructionSound { get; set; }
@@ -12,7 +14,7 @@ namespace Interfaces
         //methods in this interface
 
         public List<IDestroyable> DestroyableItemsNearBy;
-        public Car() { }
+        
         public Car(int speed, string color) : base(speed, color){
             DestructionSound = "CarExplosionSound.mp3";
             DestroyableItemsNearBy = new List<IDestroyable>();

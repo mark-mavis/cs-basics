@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/BankApp/bin/Debug/net6.0/BankApp.dll",
+            "program": "${workspaceFolder}/Interfaces/bin/Debug/net6.0/Interfaces.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/BankApp",
+            "cwd": "${workspaceFolder}/Interfaces",
             "console": "externalTerminal",
             "stopAtEntry": false
         },

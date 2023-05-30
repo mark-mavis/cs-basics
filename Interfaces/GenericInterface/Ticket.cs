@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interfaces
+namespace GenericInterface
 {
     class Ticket : IEquatable<Ticket>
     {
