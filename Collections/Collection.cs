@@ -57,41 +57,44 @@ class CollectionsExerciseController
         }
         public void RemoveElementMatchingValue(object o)
         {
-            objList.Remove(0);
+            if(objList != null) objList.Remove(0);
         }
         public static void RemoveAtSpecificPosition(int i)
         {
-            objList.RemoveAt(i);
+            if(objList != null) objList.RemoveAt(i);
         }
         public static void PrintCount()
         {
-            Console.WriteLine(objList.Count);
+            if(objList != null) Console.WriteLine(objList.Count);
         }
         public static void PrintObjects()
         {
-            foreach (object o in objList)
-            {
-                Console.WriteLine(o);
+            if(objList != null) {
+                foreach (object o in objList)
+                {
+                    Console.WriteLine(o);
+                }
             }
         }
         public static void SumAllValues()
         {
             double sum = 0;
-            foreach (object o in objList)
-            {
-                if (o is int)
+            if(objList != null)
+                foreach (object o in objList)
                 {
-                    sum += Convert.ToDouble(o);
+                    if (o is int)
+                    {
+                        sum += Convert.ToDouble(o);
+                    }
+                    else if (o is double)
+                    {
+                        sum += (double)o;
+                    }
+                    else if (o is string)
+                    {
+                        continue;
+                    }
                 }
-                else if (o is double)
-                {
-                    sum += (double)o;
-                }
-                else if (o is string)
-                {
-                    continue;
-                }
-            }
             Console.WriteLine($"Sum is: {sum}");
         }
     }
