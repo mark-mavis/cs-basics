@@ -1,7 +1,14 @@
-﻿namespace WorkingWithDateTime;
+﻿using System;
+using ParseDateTime;
+
+namespace WorkingWithDateTime;
 
 class Program{
     public static void Main(){
+
+
+        ParseInput obj = new ParseInput();
+        obj.Initialize();
 
         DateTime now = DateTime.Now;
         Console.WriteLine($"It is currently: {now}");
@@ -27,7 +34,7 @@ class Program{
         Console.WriteLine(ts.TotalDays);
 
 
-        DateTimeFormatting.Run();
+        DateAndTimeFormatting.Run();
         
     }
 }
