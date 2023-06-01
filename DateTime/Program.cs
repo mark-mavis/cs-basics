@@ -9,7 +9,7 @@ class Program{
 
         ParseInput obj = new ParseInput();
         obj.Initialize();
-
+        
         DateTime now = DateTime.Now;
         Console.WriteLine($"It is currently: {now}");
         
