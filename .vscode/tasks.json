@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/BankApp/BankApp.csproj",
+                "${workspaceFolder}/DateTime/DateTime.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/BankApp/BankApp.csproj",
+                "${workspaceFolder}/DateTime/DateTime.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/BankApp/BankApp.csproj"
+                "${workspaceFolder}/DateTime/DateTime.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

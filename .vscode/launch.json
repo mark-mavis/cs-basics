@@ -10,11 +10,11 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/BankApp/bin/Debug/net6.0/BankApp.dll",
+            "program": "${workspaceFolder}/DateTime/bin/Debug/net6.0/DateTime.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/BankApp",
+            "cwd": "${workspaceFolder}/DateTime",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
-            "console": "internalConsole",
+            "console": "externalTerminal",
             "stopAtEntry": false
         },
         {
