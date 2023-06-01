@@ -31,7 +31,7 @@ public class Program{
         result = int.TryParse(NumStrs[2], out testint);
         System.Console.WriteLine($"{result} -- '{NumStrs[2]}' : {testint}");
 
-        result = int.TryParse(NumStrs[3], out testint);
+        result = float.TryParse(NumStrs[3], out testfloat);
         System.Console.WriteLine($"{result} -- '{NumStrs[3]}' : {testfloat}");
 
     }
