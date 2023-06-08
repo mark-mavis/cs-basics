@@ -1,7 +1,14 @@
 using System;
 namespace Patterns;
 
-public class BasicPatterns{
+public class BasicPattern{
+
+    public static DateTime[] DateTimes = new DateTime[]{
+                new DateTime(DateTime.Now.Year, 1, 13),
+                new DateTime(DateTime.Now.Year, 3, 14),
+                new DateTime(DateTime.Now.Year, 3, 15),
+                new DateTime(DateTime.Now.Year, 3, 16)
+    };
 
     public static void OriginalWay(){
         // Conpare and expression to a known constant, for example...
@@ -61,6 +68,24 @@ public class BasicPatterns{
     public static bool PropertyPattern_DateCheck(DateTime dt){
 
         return (dt is {Month: 3, Day: 14 or 15});
+    }
+    public static void Controller(){
+
+        ConstantPattern_NullCheck(null);
+        ConstantPattern_NullCheck("This is a message");
+
+        ConstantPattern_TypeCheck(25);
+        ConstantPattern_TypeCheck("50");
+        ConstantPattern_TypeCheck(20.5);
+
+        DeclarationPattern_TypeCheck(25);
+        DeclarationPattern_TypeCheck("50");
+        DeclarationPattern_TypeCheck(20.5);
+
+        foreach(DateTime dt in DateTimes){
+            PropertyPattern_DateCheck(dt);
+        }
+
     }
 
     private static void LineBuilderHelper(char c, int n){

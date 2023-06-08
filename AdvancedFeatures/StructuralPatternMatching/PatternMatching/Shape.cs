@@ -1,4 +1,4 @@
-
+using System;
 namespace Shapes;
 
 public abstract class Shape{
@@ -11,16 +11,16 @@ public class Circle : Shape {
         Radius = r;
     }
     public override int Area(){
-        return (int)(Math.PI*(Math.Sqrt(Radius)));
+        return (int)(Math.PI*(Math.Pow(Radius, 2)));
     }
 }
 
-public class Square : Shape {
+public class Rectangle : Shape {
     
     public int Height{get; set;}
     public int Width{get; set;}
 
-    public Square(int height, int width){
+    public Rectangle(int height, int width){
         Height = height;
         Width = width;
     }
