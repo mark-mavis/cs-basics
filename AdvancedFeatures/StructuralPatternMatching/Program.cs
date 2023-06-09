@@ -12,5 +12,9 @@ class Program{
         DiscountGenerator.TestPurchaseData();
 
         PointClassifier.ClassifyPoints();
+
+        DateQuarterClassifier.Controller();
+
+        CommissionCalculator.PrintTradeCommission();
     }
 }

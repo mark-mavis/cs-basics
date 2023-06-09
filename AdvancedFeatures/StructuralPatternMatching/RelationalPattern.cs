@@ -1,4 +1,3 @@
-
 namespace Patterns;
 
 public readonly struct Point{
@@ -29,6 +28,38 @@ public class PointClassifier{
     public static void ClassifyPoints(){
         foreach(Point point in ListOfPoints){
            Console.WriteLine(Classify(point));
+        }
+    }
+}
+
+public class DateQuarterClassifier{
+    public static DateTime[] Dates = new DateTime[]{
+        new DateTime(2022, 2, 14),
+        new DateTime(2022, 7, 19),
+        new DateTime(2022, 12, 25),
+        new DateTime(2022, 4, 1)
+    };
+
+    public static string ClassifyDatesByQuarter(DateTime dt) => dt.Month switch{
+        (>=1 and <=3) => "Quarter 1",
+        (>=4 and <=6) => "Quarter 2",
+        (>=7 and <=9) => "Quarter 3",
+        (>=10 and <=12) => "Quarter 4",
+        _ => throw new ArgumentOutOfRangeException(nameof(dt))
+    };
+
+    public static void ClassifyDatesByBiYearly(DateTime dt){
+        if(dt is DateTime {Month: >6}){
+            Console.WriteLine("Date is in Second Half of year");
+        }else{
+            Console.WriteLine("Date is in First Half of year");
+        }
+    }
+
+    public static void Controller(){
+        foreach(DateTime dt in Dates){
+            Console.WriteLine(ClassifyDatesByQuarter(dt));
+            ClassifyDatesByBiYearly(dt);
         }
     }
 }
