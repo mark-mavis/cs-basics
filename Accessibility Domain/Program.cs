@@ -36,6 +36,7 @@ public class T1
 class Program {
     public static void Main()
     {
+    
         // Calling T1's public and internal variables;
         T1.publicInt = 50;
         Console.WriteLine($"T1.publicInt = {T1.publicInt}");
